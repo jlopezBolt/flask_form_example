@@ -1,0 +1,14 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<form method="POST" action="/">
+    <div>putting the field label and the field individually</div>
+    <div>{{ form.String.label }}: {{ form.String}}</div>
+</form>
+
+<form method="POST" action="/">
+    <div>{{ form.String_validate.label }}: {{ form.String}}</div>
+</form>
+
+<form method="POST" action="/">
+    <div>or you can do it with quickforms. </div>
+    <div>{{ wtf.quick_form(form) }}</div>
+</form>
